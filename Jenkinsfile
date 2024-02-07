@@ -21,13 +21,13 @@ pipeline {
         
         stage('Run Robot Tests') {
             steps {
-                /home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.run --NoStatusRC --variable SERVER:$CT_SERVER --outputdir reports1 /var/lib/jenkins/workspace/Amzon-Automation_Pipeline/Test_cases
+                /home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.run --NoStatusRC --variable SERVER:$CT_SERVER --outputdir reports1 /home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot
             }
         }
         
         stage('Re-run Failed Tests') {
             steps {
-                /home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.run --NoStatusRC --variable SERVER:$CT_SERVER --rerunfailed reports1/output.xml --outputdir reports /var/lib/jenkins/workspace/Amzon-Automation_Pipeline/Test_cases
+                /home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.run --NoStatusRC --variable SERVER:$CT_SERVER --rerunfailed reports1/output.xml --outputdir reports /home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot
             }
         }
         
