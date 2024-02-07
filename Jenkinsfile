@@ -16,7 +16,7 @@ pipeline {
         stage('Run Robot Tests') {
             steps {
                 script {
-                    def cmd = "python3 -m robot.run --NoStatusRC --variable SERVER:${CT_SERVER} --outputdir reports1 /home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot"
+                    def cmd = "/home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.run --NoStatusRC --variable SERVER:${CT_SERVER} --outputdir reports1 /home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot"
                     sh cmd
                 }
             }
