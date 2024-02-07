@@ -16,7 +16,7 @@ pipeline {
         stage('Run Robot Tests') {
             steps {
                 script {
-                    def cmd = "python3 -m robot.run --NoStatusRC --variable SERVER:${CT_SERVER} --outputdir reports1 /var/lib/jenkins/workspace/Amzon-Automation_Pipeline/Test_cases"
+                    def cmd = "/home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.run --NoStatusRC --variable SERVER:${CT_SERVER} --outputdir reports1 /var/lib/jenkins/workspace/Amzon-Automation_Pipeline/Test_cases"
                     sh cmd
                 }
             }
