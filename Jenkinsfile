@@ -36,18 +36,18 @@ pipeline {
 }
 
         
-        stage('Re-run Failed Tests') {
-            steps {
-                /home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.run --NoStatusRC --variable SERVER:$CT_SERVER --rerunfailed reports1/output.xml --outputdir reports /home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot
-            }
-        }
+    //     stage('Re-run Failed Tests') {
+    //         steps {
+    //             /home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.run --NoStatusRC --variable SERVER:$CT_SERVER --rerunfailed reports1/output.xml --outputdir reports /home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot
+    //         }
+    //     }
         
-        stage('Merge Reports') {
-            steps {
-                /home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.rebot --merge --output reports/output.xml -l reports/log.html -r reports/report.html reports1/output.xml reports/output.xml
-            }
-        }
-    }
+    //     stage('Merge Reports') {
+    //         steps {
+    //             /home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.rebot --merge --output reports/output.xml -l reports/log.html -r reports/report.html reports1/output.xml reports/output.xml
+    //         }
+    //     }
+    // }
     
     post {
         always {
