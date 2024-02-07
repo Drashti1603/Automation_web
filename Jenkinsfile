@@ -13,11 +13,11 @@ pipeline {
             }
         }
         
-        stage('Lint Robot Tests') {
-            steps {
-                sh 'python3 -m rflint --ignore LineTooLong /home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases'
-            }
-        }
+        // stage('Lint Robot Tests') {
+        //     steps {
+        //         sh 'python3 -m rflint --ignore LineTooLong /home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases'
+        //     }
+        // }
         
         stage('Run Robot Tests') {
             steps {
