@@ -10,7 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Execute Robot Framework tests
-                robot '/home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot'
+                robot Search_login_cart.robot
             }
         }
         stage('Publish Test Results') {
