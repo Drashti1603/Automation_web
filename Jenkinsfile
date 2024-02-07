@@ -24,7 +24,7 @@ pipeline {
                     reportFileName: '**/report.html',
                     logFileName: '**/log.html',
                     disableArchiveOutput: false,
-                    additionalCmdLineArgs: "--variable SERVER:${CT_SERVER} --NoStatusRC /var/lib/jenkins/workspace/Amzon-Automation_Pipeline/Test_cases"
+                    args: "--variable SERVER:${CT_SERVER} --NoStatusRC /var/lib/jenkins/workspace/Amzon-Automation_Pipeline/Test_cases"
                 ])
             }
         }
