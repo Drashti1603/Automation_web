@@ -12,7 +12,7 @@ pipeline {
         stage('Run Robot Tests') {
             steps {
                 // Execute Robot Framework tests
-                sh 'robot --outputdir output /home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot'
+                robot --outputdir output '/home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot'
             }
         }
         
