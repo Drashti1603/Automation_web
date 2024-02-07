@@ -5,7 +5,8 @@ pipeline {
     steps {
         // Checkout source code from version control
         git 'https://github.com/your/repository.git'
-    
+        
+
       }
     }
 
@@ -17,7 +18,7 @@ pipeline {
         stage('Publish Test Results') {
             steps {
                 // Publish test results
-                junit '/home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/repo.xml'
+                junit '/var/lib/jenkins/plugins/junit/META-INF/maven/org.jenkins-ci.plugins/junit/**/*.xml'
             }
         }
     }
