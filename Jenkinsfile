@@ -7,11 +7,7 @@ pipeline {
     }
     
     stages {
-        stage('Initialize') {
-            steps {
-                sh 'echo "PATH= ${PATH}"'
-            }
-        }
+    
         
         // stage('Lint Robot Tests') {
         //     steps {
