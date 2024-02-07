@@ -5,14 +5,14 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout source code from version control
-                git 'https://github.com/Drashti1603/Automation.git/Test_Cases'
+                git 'https://github.com/Drashti1603/Automation.git'
             }
         }
         
         stage('Run Robot Tests') {
             steps {
                 // Execute Robot Framework tests
-                robot Search_login_cart.robot
+                robot '/Test_cases/Search_login_cart.robot'
             }
         }
         
