@@ -16,9 +16,15 @@ pipeline {
         stage('Run Robot Tests') {
             steps {
                 script {
-                    def cmd = "/home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.run --NoStatusRC --variable SERVER:${CT_SERVER} --outputdir reports1 /var/lib/jenkins/workspace/Amzon-Automation_Pipeline/Test_cases"
-                    python3 cmd
-                }
+                        def CT_SERVER = "your_server_value" // Assuming you've defined CT_SERVER somewhere
+
+                        // Construct the command with interpolated Groovy variable
+                        def cmd = "/home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.run --NoStatusRC --variable SERVER:${CT_SERVER} --outputdir reports1 /var/lib/jenkins/workspace/Amzon-Automation_Pipeline/Test_cases"
+
+                        // Execute the command using 'sh' step
+                        sh "python3 ${cmd}"
+                    }
+
             }
         }
     }
