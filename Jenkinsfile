@@ -9,8 +9,11 @@ pipeline {
         }
         stage('Test') {
             steps {
+                // Define the path to the Robot Framework test file
+                def robotTestFilePath = '/home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot'
+                
                 // Execute Robot Framework tests
-                robot Search_login_cart.robot
+                robot robotTestFilePath
             }
         }
         stage('Publish Test Results') {
