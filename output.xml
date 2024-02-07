@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-02-02T17:48:26.199660" rpa="false" schemaversion="5">
+<suite id="s1" name="Search login cart" source="/home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot">
+<test id="s1-t1" name="Search on Amazon" line="12">
+<kw name="Search on Amazon" owner="Search">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-02T17:48:26.398897" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.in'.</msg>
+<arg>${HOMEPAGE}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-02T17:48:26.395221" elapsed="4.782654"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-02T17:48:31.180106" elapsed="0.353233"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-02T17:48:31.544316" level="INFO">Typing text 'shoes asian' into text field '//*[@id="twotabsearchtextbox"]'.</msg>
+<arg>${Search}</arg>
+<arg>shoes asian</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-02T17:48:31.537359" elapsed="0.619399"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-02T17:48:32.158917" level="INFO">Clicking element '//*[@id="nav-search-submit-button"]'.</msg>
+<arg>${Search_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-02T17:48:32.157604" elapsed="2.673180"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-02-02T17:48:34.832070" level="INFO">Opening url 'https://www.amazon.in/s?k=shoes&amp;rh=p_90%3A6741117031&amp;dc&amp;ds=v1%3AHPjd0UYRr2jpK9TZTPSfbBj3XuxWj7xRPOgIoQnwUQI&amp;qid=1706618545&amp;rnid=6741116031&amp;ref=sr_nr_p_90_1'</msg>
+<arg>${searchResultURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-02-02T17:48:34.831438" elapsed="2.954463"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-02T17:48:37.788899" level="INFO">Executing JavaScript:
+window.scrollBy(0,500)
+Without any arguments.</msg>
+<arg>window.scrollBy(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-02T17:48:37.787402" elapsed="0.015110"/>
+</kw>
+<status status="PASS" start="2024-02-02T17:48:26.392250" elapsed="11.411762"/>
+</kw>
+<kw name="Apply_Filters and Add_to_cart" owner="Apply_Filters and Add_to_cart">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-02-02T17:48:37.809925" level="INFO">Opening url 'https://www.amazon.in/s?k=shoes+asian&amp;rh=n%3A1571283031%2Cp_89%3AASIAN&amp;dc&amp;ds=v1%3AotwcMt3yo16FdR0%2FG8RvfL8TBlz5MMwsYuw6I4iKEP4&amp;crid=1FR4EOSWXARGQ&amp;qid=1706692550&amp;rnid=3837712031&amp;sprefix=shoes+asian%2Caps%2C255&amp;ref=sr_nr_p_89_1'</msg>
+<arg>${Deliver_today}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-02-02T17:48:37.809102" elapsed="2.124123"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-02T17:48:39.936375" level="INFO">Executing JavaScript:
+window.scrollBy(0,500)
+Without any arguments.</msg>
+<arg>window.scrollBy(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-02T17:48:39.933937" elapsed="0.035094"/>
+</kw>
+<kw name="Input Prices And Go" owner="price">
+<msg time="2024-02-02T17:48:39.972734" level="INFO">Typing text '500' into text field '//*[@id="low-price"]'.</msg>
+<msg time="2024-02-02T17:48:40.297259" level="INFO">Typing text '1000' into text field '//*[@id="high-price"]'.</msg>
+<msg time="2024-02-02T17:48:40.482861" level="INFO">Clicking element '//*[@id="a-autoid-1"]'.</msg>
+<arg>${Low_price}</arg>
+<arg>${High_price}</arg>
+<arg>${Go}</arg>
+<status status="PASS" start="2024-02-02T17:48:39.970291" elapsed="2.889296"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-02T17:48:42.861024" level="INFO">Executing JavaScript:
+window.scrollBy(0,500)
+Without any arguments.</msg>
+<arg>window.scrollBy(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-02T17:48:42.860235" elapsed="0.058838"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-02-02T17:48:43.717735" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-02-02T17:48:43.718565" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //*[p_n_size_browse-vebin/2022653031"] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[p_n_size_browse-vebin/2022653031"]' is not a valid XPath expression.
+  (Session info: chrome=120.0.6099.71); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x55a5a8a3ef83 &lt;unknown&gt;
+#1 0x55a5a86f7cf7 &lt;unknown&gt;
+#2 0x55a5a86fe2a3 &lt;unknown&gt;
+#3 0x55a5a8700798 &lt;unknown&gt;
+#4 0x55a5a87008ec &lt;unknown&gt;
+#5 0x55a5a87476c7 &lt;unknown&gt;
+#6 0x55a5a8747aa1 &lt;unknown&gt;
+#7 0x55a5a8792da1 &lt;unknown&gt;
+#8 0x55a5a87710dd &lt;unknown&gt;
+#9 0x55a5a8790006 &lt;unknown&gt;
+#10 0x55a5a8770e53 &lt;unknown&gt;
+#11 0x55a5a8738dd4 &lt;unknown&gt;
+#12 0x55a5a873a1de &lt;unknown&gt;
+#13 0x55a5a8a03531 &lt;unknown&gt;
+#14 0x55a5a8a07455 &lt;unknown&gt;
+#15 0x55a5a89eff55 &lt;unknown&gt;
+#16 0x55a5a8a080ef &lt;unknown&gt;
+#17 0x55a5a89d399f &lt;unknown&gt;
+#18 0x55a5a8a2c008 &lt;unknown&gt;
+#19 0x55a5a8a2c1d7 &lt;unknown&gt;
+#20 0x55a5a8a3e124 &lt;unknown&gt;
+#21 0x7f3d16d21609 start_thread
+</msg>
+<arg>${Size}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-02-02T17:48:42.921483" elapsed="0.804670">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //*[p_n_size_browse-vebin/2022653031"] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[p_n_size_browse-vebin/2022653031"]' is not a valid XPath expression.
+  (Session info: chrome=120.0.6099.71); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x55a5a8a3ef83 &lt;unknown&gt;
+#1 0x55a5a86f7cf7 &lt;unknown&gt;
+#2 0x55a5a86fe2a3 &lt;unknown&gt;
+#3 0x55a5a8700798 &lt;unknown&gt;
+#4 0x55a5a87008ec &lt;unknown&gt;
+#5 0x55a5a87476c7 &lt;unknown&gt;
+#6 0x55a5a8747aa1 &lt;unknown&gt;
+#7 0x55a5a8792da1 &lt;unknown&gt;
+#8 0x55a5a87710dd &lt;unknown&gt;
+#9 0x55a5a8790006 &lt;unknown&gt;
+#10 0x55a5a8770e53 &lt;unknown&gt;
+#11 0x55a5a8738dd4 &lt;unknown&gt;
+#12 0x55a5a873a1de &lt;unknown&gt;
+#13 0x55a5a8a03531 &lt;unknown&gt;
+#14 0x55a5a8a07455 &lt;unknown&gt;
+#15 0x55a5a89eff55 &lt;unknown&gt;
+#16 0x55a5a8a080ef &lt;unknown&gt;
+#17 0x55a5a89d399f &lt;unknown&gt;
+#18 0x55a5a8a2c008 &lt;unknown&gt;
+#19 0x55a5a8a2c1d7 &lt;unknown&gt;
+#20 0x55a5a8a3e124 &lt;unknown&gt;
+#21 0x7f3d16d21609 start_thread
+</status>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>window.scrollBy(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2024-02-02T17:48:43.726841" elapsed="0.000350"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Size}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-02T17:48:43.727705" elapsed="0.000242"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Product1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-02T17:48:43.728397" elapsed="0.000291"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<var>${tab2}</var>
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-02T17:48:43.731263" elapsed="0.000438"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>window.scrollBy(0,350)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2024-02-02T17:48:43.732715" elapsed="0.000316"/>
+</kw>
+<kw name="Perform Checkout" owner="Shop_product(steps)">
+<arg>${Add_to_cart}</arg>
+<arg>${Go_to_cart}</arg>
+<arg>${Check-out}</arg>
+<status status="NOT RUN" start="2024-02-02T17:48:43.733435" elapsed="0.000285"/>
+</kw>
+<status status="FAIL" start="2024-02-02T17:48:37.806735" elapsed="5.927452">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //*[p_n_size_browse-vebin/2022653031"] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[p_n_size_browse-vebin/2022653031"]' is not a valid XPath expression.
+  (Session info: chrome=120.0.6099.71); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x55a5a8a3ef83 &lt;unknown&gt;
+#1 0x55a5a86f7cf7 &lt;unknown&gt;
+#2 0x55a5a86fe2a3 &lt;unknown&gt;
+#3 0x55a5a8700798 &lt;unknown&gt;
+#4 0x55a5a87008ec &lt;unknown&gt;
+#5 0x55a5a87476c7 &lt;unknown&gt;
+#6 0x55a5a8747aa1 &lt;unknown&gt;
+#7 0x55a5a8792da1 &lt;unknown&gt;
+#8 0x55a5a87710dd &lt;unknown&gt;
+#9 0x55a5a8790006 &lt;unknown&gt;
+#10 0x55a5a8770e53 &lt;unknown&gt;
+#11 0x55a5a8738dd4 &lt;unknown&gt;
+#12 0x55a5a873a1de &lt;unknown&gt;
+#13 0x55a5a8a03531 &lt;unknown&gt;
+#14 0x55a5a8a07455 &lt;unknown&gt;
+#15 0x55a5a89eff55 &lt;unknown&gt;
+#16 0x55a5a8a080ef &lt;unknown&gt;
+#17 0x55a5a89d399f &lt;unknown&gt;
+#18 0x55a5a8a2c008 &lt;unknown&gt;
+#19 0x55a5a8a2c1d7 &lt;unknown&gt;
+#20 0x55a5a8a3e124 &lt;unknown&gt;
+#21 0x7f3d16d21609 start_thread
+</status>
+</kw>
+<kw name="Login" owner="Login">
+<status status="NOT RUN" start="2024-02-02T17:48:43.736353" elapsed="0.000391"/>
+</kw>
+<status status="FAIL" start="2024-02-02T17:48:26.390616" elapsed="17.347111">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //*[p_n_size_browse-vebin/2022653031"] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[p_n_size_browse-vebin/2022653031"]' is not a valid XPath expression.
+  (Session info: chrome=120.0.6099.71); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x55a5a8a3ef83 &lt;unknown&gt;
+#1 0x55a5a86f7cf7 &lt;unknown&gt;
+#2 0x55a5a86fe2a3 &lt;unknown&gt;
+#3 0x55a5a8700798 &lt;unknown&gt;
+#4 0x55a5a87008ec &lt;unknown&gt;
+#5 0x55a5a87476c7 &lt;unknown&gt;
+#6 0x55a5a8747aa1 &lt;unknown&gt;
+#7 0x55a5a8792da1 &lt;unknown&gt;
+#8 0x55a5a87710dd &lt;unknown&gt;
+#9 0x55a5a8790006 &lt;unknown&gt;
+#10 0x55a5a8770e53 &lt;unknown&gt;
+#11 0x55a5a8738dd4 &lt;unknown&gt;
+#12 0x55a5a873a1de &lt;unknown&gt;
+#13 0x55a5a8a03531 &lt;unknown&gt;
+#14 0x55a5a8a07455 &lt;unknown&gt;
+#15 0x55a5a89eff55 &lt;unknown&gt;
+#16 0x55a5a8a080ef &lt;unknown&gt;
+#17 0x55a5a89d399f &lt;unknown&gt;
+#18 0x55a5a8a2c008 &lt;unknown&gt;
+#19 0x55a5a8a2c1d7 &lt;unknown&gt;
+#20 0x55a5a8a3e124 &lt;unknown&gt;
+#21 0x7f3d16d21609 start_thread
+</status>
+</test>
+<status status="FAIL" start="2024-02-02T17:48:26.207307" elapsed="17.533706"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Search login cart">Search login cart</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-02-02T17:48:26.387480" level="ERROR">Error in file '/home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot' on line 8: Invalid resource file extension '.py'. Supported extensions are '.json', '.resource', '.rest', '.robot', '.rsrc', '.rst', '.tsv' and '.txt'.</msg>
+<msg time="2024-02-02T17:48:26.388917" level="ERROR">Error in file '/home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot' on line 9: Invalid resource file extension '.py'. Supported extensions are '.json', '.resource', '.rest', '.robot', '.rsrc', '.rst', '.tsv' and '.txt'.</msg>
+</errors>
+</robot>
