@@ -21,19 +21,19 @@ pipeline {
         
         stage('Run Robot Tests') {
             steps {
-                sh '/home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.run --NoStatusRC --variable SERVER:$CT_SERVER --outputdir reports1 /var/lib/jenkins/workspace/Amzon-Automation_Pipeline/Test_cases'
+                /home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.run --NoStatusRC --variable SERVER:$CT_SERVER --outputdir reports1 /var/lib/jenkins/workspace/Amzon-Automation_Pipeline/Test_cases
             }
         }
         
         stage('Re-run Failed Tests') {
             steps {
-                sh '/home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.run --NoStatusRC --variable SERVER:$CT_SERVER --rerunfailed reports1/output.xml --outputdir reports /var/lib/jenkins/workspace/Amzon-Automation_Pipeline/Test_cases'
+                /home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.run --NoStatusRC --variable SERVER:$CT_SERVER --rerunfailed reports1/output.xml --outputdir reports /var/lib/jenkins/workspace/Amzon-Automation_Pipeline/Test_cases
             }
         }
         
         stage('Merge Reports') {
             steps {
-                sh '/home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.rebot --merge --output reports/output.xml -l reports/log.html -r reports/report.html reports1/output.xml reports/output.xml'
+                /home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.rebot --merge --output reports/output.xml -l reports/log.html -r reports/report.html reports1/output.xml reports/output.xml
             }
         }
     }
