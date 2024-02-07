@@ -17,7 +17,7 @@ pipeline {
         stage('Publish Test Results') {
             steps {
                 // Publish test results
-                junit 'path/to/test-reports/**/*.xml'
+                junit '/home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/repo.xml'
             }
         }
     }
