@@ -28,7 +28,7 @@ pipeline {
             script {
                 step([
                     $class              : 'RobotPublisher',
-                    outputPath          : 'Output_Screenshots',
+                    outputPath          : '/var/lib/jenkins/workspace/A_Pipeline',
                     outputFileName      : '**/output.xml',
                     reportFileName      : '**/report.html',
                     logFileName         : '**/log.html',
