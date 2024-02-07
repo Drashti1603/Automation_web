@@ -10,10 +10,10 @@ pipeline {
         stage('Test') {
             steps {
                 // Define the path to the Robot Framework test file
-                def robotTestFilePath = '/Test_cases/Search_login_cart.robot'
+                
                 
                 // Execute Robot Framework tests
-                robot robotTestFilePath
+                robot '/Test_cases/Search_login_cart.robot'
             }
         }
         stage('Publish Test Results') {
