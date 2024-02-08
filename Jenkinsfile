@@ -12,16 +12,23 @@ pipeline {
                 sh 'echo "PATH= ${PATH}"'
             }
         }
-        
+        stages {
+        stage('Install dependencies') {
+            steps {
+                sh 'python3 -m pip install robotframework'
+                sh 'python3 -m pip install robotframework-seleniumlibrary'
+            }
+        }
+        stage('Check environment') {
+            steps {
+                sh 'python3 --version'
+                sh 'pip3 list'
+            }
+        }
         stage('Run Robot Tests') {
             steps {
                 script{
-                    pwd
-                    python3 -m pip install robotframework
-                    python3 -m pip install robotframework-seleniumlibrary
-                    python3 --version
-                    pip3 list
-                    python3 -m robot.run /var/lib/jenkins/workspace/Automation_Free/Test_cases/Search_login_cart.robot
+                    sh 'python3 -m robot.run /var/lib/jenkins/workspace/Automation_Free/Test_cases/Search_login_cart.robot'
             }
         }
 
