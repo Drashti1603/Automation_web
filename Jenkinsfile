@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     // Use the installed Robot Framework
-                      robot script: '/var/lib/jenkins/workspace/Automation_pipeline/Test_cases', 
+                robot script: '/var/lib/jenkins/workspace/Automation_pipeline/Test_cases', 
                       outputDirectory: '/var/lib/jenkins/workspace/Automation_pipeline/',
                       otherArgs: '--variable SERVER:192.168.3.45 --NoStatusRC'
                 }
