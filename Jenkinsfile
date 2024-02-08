@@ -17,8 +17,8 @@ pipeline {
             steps {
                 script {
                     // Use the installed Robot Framework
-                      robot script: '/home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot', 
-                      outputDirectory: '/home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/',
+                      robot script: '/var/lib/jenkins/workspace/Automation_pipeline/Test_cases', 
+                      outputDirectory: '/var/lib/jenkins/workspace/Automation_pipeline/',
                       otherArgs: '--variable SERVER:192.168.3.45 --NoStatusRC'
                 }
             }
@@ -43,7 +43,7 @@ pipeline {
             script {
                 step([
                     $class              : 'RobotPublisher',
-                    outputPath          : '/home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/',
+                    outputPath          : '/var/lib/jenkins/workspace/Automation_pipeline/',
                     outputFileName      : '**/output.xml',
                     reportFileName      : '**/report.html',
                     logFileName         : '**/log.html',
