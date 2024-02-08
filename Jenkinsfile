@@ -15,14 +15,17 @@ pipeline {
         
         stage('Run Robot Tests') {
             steps {
-                script {
-                    // Use the installed Robot Framework
-                robot script: '/var/lib/jenkins/workspace/Automation_pipeline/Test_cases', 
-                      outputDirectory: '/var/lib/jenkins/workspace/Automation_pipeline/',
-                      otherArgs: '--variable SERVER:192.168.3.45 --NoStatusRC'
-                }
+                robot(
+                    projectName: 'Automation_pipeline',
+                    outputPath: '/var/lib/jenkins/workspace/Automation_pipeline/',
+                    additionalCmdLineArgs: '--variable SERVER:192.168.3.45 --NoStatusRC',
+                    disableArchiveOutput: true,
+                    passPercentageThreshold: 0
+                )
             }
         }
+
+
     
         
         // stage('Re-run Failed Tests') {
