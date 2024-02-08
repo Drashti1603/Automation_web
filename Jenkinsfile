@@ -18,7 +18,7 @@ pipeline {
                 script {
                     // Use the installed Robot Framework
                       robot script: '/home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot', 
-                      outputDirectory: '/home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Output_Screenshots',
+                      outputDirectory: '/home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/',
                       otherArgs: '--variable SERVER:192.168.3.45 --NoStatusRC'
                 }
             }
