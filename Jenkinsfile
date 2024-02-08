@@ -12,40 +12,28 @@ pipeline {
                 sh 'echo "PATH= ${PATH}"'
             }
         }
-        stages {
+        
         stage('Install dependencies') {
             steps {
                 sh 'python3 -m pip install robotframework'
                 sh 'python3 -m pip install robotframework-seleniumlibrary'
             }
         }
+        
         stage('Check environment') {
             steps {
                 sh 'python3 --version'
                 sh 'pip3 list'
             }
         }
+        
         stage('Run Robot Tests') {
             steps {
-                script{
+                script {
                     sh 'python3 -m robot.run /var/lib/jenkins/workspace/Automation_Free/Test_cases/Search_login_cart.robot'
+                }
             }
         }
-
-
-    
-        
-        // stage('Re-run Failed Tests') {
-        //     steps {
-        //         /home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.run --NoStatusRC --variable SERVER:$CT_SERVER --rerunfailed reports1/output.xml --outputdir reports /home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot
-        //     }
-        // }
-        
-        // stage('Merge Reports') {
-        //     steps {
-        //         /home/drashti/.local/lib/python3.8/site-packages (7.0) -m robot.rebot --merge --output reports/output.xml -l reports/log.html -r reports/report.html reports1/output.xml reports/output.xml
-        //     }
-        // }
     }
     
     post {
