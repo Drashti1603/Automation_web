@@ -15,13 +15,13 @@ pipeline {
         
         stage('Run Robot Tests') {
             steps {
-                robot(
-                    projectName: 'Automation_pipeline',
-                    outputPath: '/var/lib/jenkins/workspace/Automation_pipeline/',
-                    additionalCmdLineArgs: '--variable SERVER:192.168.3.45 --NoStatusRC',
-                    disableArchiveOutput: true,
-                    passPercentageThreshold: 0
-                )
+                script{
+                    pwd
+                    python3 -m pip install robotframework
+                    python3 -m pip install robotframework-seleniumlibrary
+                    python3 --version
+                    pip3 list
+                    python3 -m robot.run /var/lib/jenkins/workspace/Automation_Free/Test_cases/Search_login_cart.robot
             }
         }
 
