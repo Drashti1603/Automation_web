@@ -16,8 +16,10 @@ pipeline {
         stage('Run Robot Tests') {
             steps {
                 script {
-                    def cmd = "/usr/bin/python3 -m robot.run --NoStatusRC --variable SERVER:192.168.3.45 --outputdir reports1 /home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot"
-                    sh cmd
+                    // Use the installed Robot Framework
+                      robot script: '/home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Test_cases/Search_login_cart.robot', 
+                      outputDirectory: '/home/drashti/Documents/Android_Automation/robot-files/Web_Automation/Robot_Files/Amazon_Automation/Output_Screenshots',
+                      otherArgs: '--variable SERVER:192.168.3.45 --NoStatusRC'
                 }
             }
         }
